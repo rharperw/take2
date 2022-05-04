@@ -2,12 +2,10 @@ extends layout
 
 block layout-content
   div.View
-    h1.Banner Record DB
     div.Message
       div.Title
-        h3 insert text here
-        h1 insert more text here
-      span.Details and yet more text
+        label(for="Year of release") 
+        input(type="number")
+        label(for="Artist name") 
+        input(type="text", name="")
     div.NavButtons
-      a(href="/user")
-          div.NavButton Add new user
