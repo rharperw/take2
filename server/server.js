@@ -2,9 +2,9 @@
 
 /** dependencies */
 const express = require('express');
-const mariadb = require('mariadb');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
+const path = require('path');
 
 /** server config */
 dotenv.config({ path: '.env-local' });
@@ -16,7 +16,10 @@ const PORT = process.env.PORT || '3050';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('client'));
 app.use(morgan('dev'));
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 /** listener */
 
@@ -27,7 +30,7 @@ app.listen(PORT, () => {
 /** routes */
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello world');
+  res.render('index', { root: '../client/' });
 });
 
 const userRouter = require('../server/routes/table');
