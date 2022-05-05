@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 /** routes */
 
 app.get('/', (req, res) => {
-  res.render('index', { root: '../client/' });
+  res.render('index', { root: 'views' });
 });
 
 const userRouter = require('../server/routes/table');

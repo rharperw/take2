@@ -1,11 +1,14 @@
-extends layout
+doctype html
+html
 
-block layout-content
-  div.View
-    div.Message
-      div.Title
-        label(for="Year of release") 
-        input(type="number")
-        label(for="Artist name") 
-        input(type="text", name="")
-    div.NavButtons
+  head
+    link(rel="stylesheet", href="/style.css")
+  body
+    h1 Record Catalogue
+    div(class="newRecord")
+      input(type="number", name="release_year" placeholder="Year of release" min=1920)
+      input(type="text", name="album_name" placeholder="Album Title")
+      input(type="text", name="artist_name", placeholder="Artist Name")
+      input(type="text", name="genre", placeholder='Genre')
+      input(type="text", name="subGenre" placeholder="subGenre")
+      button submit
