@@ -1,5 +1,4 @@
 * {
-  background-color: aquamarine;
   box-sizing: border-box;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -19,4 +18,30 @@
   padding: 1px;
   font-size: 9px;
   margin: 1px;
+}
+
+.radioButtons {
+  vertical-align: middle;
+}
+
+.updates {
+  column-width: 180px;
+  box-shadow: 10px;
+  background-color: rgb(217, 200, 234);
+  width: 220px;
+  padding: 10px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  background-color: rgb(188, 183, 192);
+  flex: 0 0 200px;
+  border: 2px solid grey;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
 }
