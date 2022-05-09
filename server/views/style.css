@@ -1,3 +1,22 @@
-body {
-  background-color: aqua;
+* {
+  background-color: aquamarine;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.newRecord {
+  column-width: 160px;
+  width: 150px;
+  padding: 1px;
+  font-size: 9px;
+  margin: 1px;
+}
+
+.updateEntry {
+  column-width: 160px;
+  width: 150px;
+  padding: 1px;
+  font-size: 9px;
+  margin: 1px;
 }

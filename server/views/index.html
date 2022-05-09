@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <h1>Record Catalogue</h1>
-    <div class="newRecord">
-      <input type="number" name="release_year" placeholder="Year of release" min="1920">
-      <input type="text" name="album_name" placeholder="Album Title">
-      <input type="text" name="artist_name" placeholder="Artist Name">
-      <input type="text" name="genre" placeholder="Genre">
-      <input type="text" name="subGenre" placeholder="subGenre">
-      <button>submit</button>
-    </div>
+    <h2>Record Catalogue
+      <form method="post" action="/table/add">
+        <div class="newRecord">
+          <h3>Create New Entry</h3>
+          <div class="newRecord"></div>
+          <label>Year of release </label>
+          <input type="number" name="release_year" placeholder="Year of release" min="1920">
+          <div class="newRecord"></div>
+          <label>Album name </label>
+          <input type="text" name="album" placeholder="Album Title">
+          <div class="newRecord"></div>
+          <label>Artist name</label>
+          <input type="text" name="artist" placeholder="Artist Name">
+          <div class="newRecord"></div>
+          <label>Genre</label>
+          <input type="text" name="genre" placeholder="Genre">
+          <div class="newRecord"></div>
+          <label>Subgenre</label>
+          <input type="text" name="subgenre" placeholder="Subgenre">
+          <div class="newRecord"></div>
+          <button type="submit">run add</button>
+        </div>
+        <form method="PUT" action="/table/amend"></form>
+        <div class="updateEntry">
+          <h3>Update Existing Entry</h3>
+          <div class="updateEntry"></div>
+          <label>Year of release </label>
+          <input type="number" name="release_year" placeholder="Year of release" min="1920">
+          <div class="updateEntry"></div>
+          <label>Album name </label>
+          <input type="text" name="album" placeholder="Album Title">
+          <div class="updateEntry"></div>
+          <label>Artist name</label>
+          <input type="text" name="artist" placeholder="Artist Name">
+          <div class="updateEntry"></div>
+          <label>Genre</label>
+          <input type="text" name="genre" placeholder="Genre">
+          <div class="updateEntry"></div>
+          <label>Subgenre</label>
+          <input type="text" name="subgenre" placeholder="Subgenre">
+          <div class="updateEntry"></div>
+          <label>Subgenre</label>
+          <input type="text" name="id" placeholder="Record Number">
+          <div class="updateEntry"></div>
+          <button type="submit">run amend</button>
+        </div>
+      </form>
+    </h2>
   </body>
 </html>

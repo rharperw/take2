@@ -16,7 +16,7 @@ const PORT = process.env.PORT || '3050';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('client'));
+app.use(express.static('views'));
 app.use(morgan('dev'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 /** routes */
 
 app.get('/', (req, res) => {
-  res.render('index', { root: 'views' });
+  res.render('test', { root: 'views' });
 });
 
 const userRouter = require('../server/routes/table');

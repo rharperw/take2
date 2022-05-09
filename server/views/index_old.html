@@ -1,0 +1,48 @@
+<form action="/table/add" method="POST">
+  <h1>CREATE ENTRY</h1>
+  <input
+    name="release_year"
+    placeholder="Year of release"
+    type="number"
+    required
+  /><br />
+  <input name="album" placeholder="Album title" type="text" required /><br />
+  <input name="artist" placeholder="Artist name" type="text" required /><br />
+  <input name="genre" placeholder="Genre" type="text" required /><br />
+  <input name="subgenre" placeholder="Subgenre" type="text" required /><br />
+
+  <button type="submit">Submit</button>
+</form>
+<p></p>
+<form action="/table/amend" method="POST">
+  <input type="hidden" name="_method" value="PUT" />
+  <h1>AMEND ENTRY</h1>
+  <input
+    name="release_year"
+    placeholder="Year of release"
+    type="number"
+    required
+  /><br />
+  <input name="album" placeholder="Album title" type="text" required /><br />
+  <input name="artist" placeholder="Artist name" type="text" required /><br />
+  <input name="genre" placeholder="Genre" type="text" required /><br />
+  <input name="subgenre" placeholder="Subgenre" type="text" required /><br />
+  <input name="id" placeholder="Catalog Number" type="text" required /><br />
+  <button type="submit">Submit</button>
+</form>
+<p></p>
+<form>
+  <h1>DELETE ENTRY</h1>
+  <input
+    name="year"
+    placeholder="Year of release"
+    type="number"
+    required
+  /><br />
+  <input name="ablum" placeholder="Album title" type="text" required /><br />
+  <input name="artist" placeholder="Artist name" type="text" required /><br />
+  <input name="genre" placeholder="Genre" type="text" required /><br />
+  <input name="subgenre" placeholder="Subgenre" type="text" required /><br />
+
+  <button type="submit">Submit</button>
+</form>

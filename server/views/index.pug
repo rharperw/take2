@@ -2,13 +2,52 @@ doctype html
 html
 
   head
-    link(rel="stylesheet", href="/style.css")
+    link(rel="stylesheet" type="text/css" href="style.css")
   body
-    h1 Record Catalogue
-    div(class="newRecord")
-      input(type="number", name="release_year" placeholder="Year of release" min=1920)
-      input(type="text", name="album_name" placeholder="Album Title")
-      input(type="text", name="artist_name", placeholder="Artist Name")
-      input(type="text", name="genre", placeholder='Genre')
-      input(type="text", name="subGenre" placeholder="subGenre")
-      button submit
+
+    h2 Record Catalogue
+          
+      form(method="post" action="/table/add")
+        div(class="newRecord")
+          h3 Create New Entry
+          div(class="newRecord")
+          label Year of release 
+          input(type="number", name="release_year" placeholder="Year of release" min=1920)
+          div(class="newRecord")
+          label Album name 
+          input(type="text", name="album" placeholder="Album Title")
+          div(class="newRecord")
+          label Artist name
+          input(type="text", name="artist", placeholder="Artist Name")
+          div(class="newRecord")
+          label Genre
+          input(type="text", name="genre", placeholder='Genre')
+          div(class="newRecord")
+          label Subgenre
+          input(type="text", name="subgenre" placeholder="Subgenre")
+          div(class="newRecord")
+          button(type="submit") run add
+
+        form(method="PUT" action="/table/amend")
+        div(class="updateEntry")
+          h3 Update Existing Entry
+          div(class="updateEntry")
+          label Year of release 
+          input(type="number", name="release_year" placeholder="Year of release" min=1920)
+          div(class="updateEntry")
+          label Album name 
+          input(type="text", name="album" placeholder="Album Title")
+          div(class="updateEntry")
+          label Artist name
+          input(type="text", name="artist", placeholder="Artist Name")
+          div(class="updateEntry")
+          label Genre
+          input(type="text", name="genre", placeholder='Genre')
+          div(class="updateEntry")
+          label Subgenre
+          input(type="text", name="subgenre" placeholder="Subgenre")
+          div(class="updateEntry")
+          label Subgenre
+          input(type="text", name="id" placeholder="Record Number")
+          div(class="updateEntry")
+          button(type="submit") run amend
