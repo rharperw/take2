@@ -5,10 +5,10 @@ const table = process.env.DB_TABLE;
 
 /** get request */
 
-router.get('/:id', async function (req, res) {
+router.get('/', async function (req, res) {
   try {
     const sqlQuery = `SELECT * FROM ${table} where id=?`;
-    const rows = await pool.query(sqlQuery, req.params.id);
+    const rows = await pool.query(sqlQuery, req.body.id);
     res.status(200).json(rows);
   } catch (error) {
     res.status(400).send(error.message);

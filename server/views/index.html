@@ -10,20 +10,15 @@
       <div class="newRecord">
         <h3>Create New Entry</h3>
         <div class="newRecord"></div>
-        <label>Year of release </label>
-        <input type="number" name="release_year" placeholder="Year of release" min="1920">
+        <input class="textInput" type="number" name="release_year" placeholder="Year of release" min="1920">
         <div class="newRecord"></div>
-        <label>Album name </label>
-        <input type="text" name="album" placeholder="Album Title">
+        <input class="textInput" type="text" name="album" placeholder="Album Title">
         <div class="newRecord"></div>
-        <label>Artist name</label>
-        <input type="text" name="artist" placeholder="Artist Name">
+        <input class="textInput" type="text" name="artist" placeholder="Artist Name">
         <div class="newRecord"></div>
-        <label>Genre</label>
-        <input type="text" name="genre" placeholder="Genre">
+        <input class="textInput" type="text" name="genre" placeholder="Genre">
         <div class="newRecord"></div>
-        <label>Subgenre</label>
-        <input type="text" name="subgenre" placeholder="Subgenre">
+        <input class="textInput" type="text" name="subgenre" placeholder="Subgenre">
         <div class="newRecord"></div>
         <button type="submit">Create!</button>
       </div>
@@ -32,39 +27,42 @@
       <div class="updateEntry">
         <h3>Update Existing Entry</h3>
         <div class="updateEntry"></div>
-        <label>Year of release </label>
-        <input type="number" name="release_year" placeholder="Year of release" min="1920">
+        <input class="textInput" type="number" name="release_year" placeholder="Year of release" min="1920">
         <div class="updateEntry"></div>
-        <label>Album name </label>
-        <input type="text" name="album" placeholder="Album Title">
+        <input class="textInput" type="text" name="album" placeholder="Album Title">
         <div class="updateEntry"></div>
-        <label>Artist name</label>
-        <input type="text" name="artist" placeholder="Artist Name">
+        <input class="textInput" type="text" name="artist" placeholder="Artist Name">
         <div class="updateEntry"></div>
-        <label>Genre</label>
-        <input type="text" name="genre" placeholder="Genre">
+        <input class="textInput" type="text" name="genre" placeholder="Genre">
         <div class="updateEntry"></div>
-        <label>Subgenre</label>
-        <input type="text" name="subgenre" placeholder="Subgenre">
+        <input class="textInput" type="text" name="subgenre" placeholder="Subgenre">
         <div class="updateEntry"></div>
-        <label>Catalogue Number</label>
-        <input type="text" name="id" placeholder="Record Number">
+        <input class="textInput" type="text" name="id" placeholder="Record Number">
         <div class="updateEntry"></div>
         <fieldset class="radioButtons">
-          <div> 
-            <input type="radio" name="crudAction" id="updateRecord">
-            <label for="updateRecord">Update Record</label>
-          </div>
-          <div>
-            <input type="radio" name="crudAction" id="deleteRecord">
-            <label for="deleteRecord">Delete Record</label>
-          </div>
-          <div class="updateEntry">
-            <button type="submit">Update!</button>
-          </div>
+          <div> </div>
+          <input type="radio" name="crudAction" id="updateRecord">
+          <label for="updateRecord">Update Record</label>
+          <div></div>
+          <input type="radio" name="crudAction" id="deleteRecord">
+          <label for="deleteRecord">Delete Record</label>
+          <div class="updateEntry"></div>
+          <button type="submit">Update!</button>
         </fieldset>
+      </div>
+    </form>
+    <form method="GET" action="/">
+      <div class="updateEntry">
+        <h3>Get Entry</h3>
+        <div class="getEntry"></div>
+        <input class="textInput" type="number" placeholder="Catalogue Number" name="id">
+        <button type="submit">Retrieve!</button>
       </div>
     </form>
   </div>
 </div>
-<div class="body-text"></div>
+<div class="body-text">
+  <p>From today's featured article</p>
+  <p>Mansur Nizar ibn al-Mustansir (1045–1095) was a Fatimid prince and the eldest son of al-Mustansir, an Isma'ili imam and the eighth Fatimid caliph. When al-Mustansir died in December 1094, the powerful vizier, al-Afdal Shahanshah, raised Nizar's younger brother al-Musta'li to the throne in Cairo, bypassing the claims of Nizar and other older sons of al-Mustansir. Nizar escaped, rebelled and seized Alexandria, where he reigned as caliph with the regnal name al-Mustafa li-Din Allah. In late 1095, he was defeated, taken prisoner and executed by immurement. During the 12th century, some of Nizar's actual or claimed descendants tried, without success, to seize the throne from the Fatimid caliphs. Many Isma'ilis, especially in Persia, rejected al-Musta'li and considered Nizar to have been the rightful imam. As a result, they split off from the Fatimid regime and founded the Nizari branch of Isma'ilism, with their own line of imams who claimed descent from Nizar. This line continues to this day in the person of the Aga Khan. (Full article...)</p>
+  <p>Recently featured:</p>
+</div>

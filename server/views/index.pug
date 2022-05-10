@@ -69,52 +69,51 @@ div(class="sidebar")
       div(class="newRecord")
         h3 Create New Entry
         div(class="newRecord")
-        label Year of release 
-        input(type="number", name="release_year" placeholder="Year of release" min=1920)
+        input(type="number", name="release_year" placeholder="Year of release" min=1920 class="textInput")
         div(class="newRecord")
-        label Album name 
-        input(type="text", name="album" placeholder="Album Title")
+        input(type="text", name="album" placeholder="Album Title" class="textInput")
         div(class="newRecord")
-        label Artist name
-        input(type="text", name="artist", placeholder="Artist Name")
+        input(type="text", name="artist", placeholder="Artist Name" class="textInput")
         div(class="newRecord")
-        label Genre
-        input(type="text", name="genre", placeholder='Genre')
+        input(type="text", name="genre", placeholder='Genre' class="textInput")
         div(class="newRecord")
-        label Subgenre
-        input(type="text", name="subgenre" placeholder="Subgenre")
+        input(type="text", name="subgenre" placeholder="Subgenre" class="textInput")
         div(class="newRecord")
         button(type="submit") Create!
     form(method="PUT" action="/table/amend")
       div(class="updateEntry")
         h3 Update Existing Entry
         div(class="updateEntry")
-        label Year of release 
-        input(type="number", name="release_year" placeholder="Year of release" min=1920)
+        input(type="number", name="release_year" placeholder="Year of release" min=1920 class="textInput")
         div(class="updateEntry")
-        label Album name 
-        input(type="text", name="album" placeholder="Album Title")
+        input(type="text", name="album" placeholder="Album Title" class="textInput")
         div(class="updateEntry")
-        label Artist name
-        input(type="text", name="artist", placeholder="Artist Name")
+        input(type="text", name="artist", placeholder="Artist Name" class="textInput")
         div(class="updateEntry")
-        label Genre
-        input(type="text", name="genre", placeholder='Genre')
+        input(type="text", name="genre", placeholder='Genre' class="textInput")
         div(class="updateEntry")
-        label Subgenre
-        input(type="text", name="subgenre" placeholder="Subgenre")
+        input(type="text", name="subgenre" placeholder="Subgenre" class="textInput")
         div(class="updateEntry")
-        label Catalogue Number
-        input(type="text", name="id" placeholder="Record Number")
+        input(type="text", name="id" placeholder="Record Number" class="textInput")
         div(class="updateEntry")
         fieldset(class="radioButtons")
-          div 
-            input(type="radio" name="crudAction" id="updateRecord")
-            label(for="updateRecord") Update Record
-          div
-            input(type="radio" name="crudAction" id="deleteRecord")
-            label(for="deleteRecord") Delete Record
-          div(class="updateEntry")
-            button(type="submit") Update!
+         div 
+         input(type="radio" name="crudAction" id="updateRecord")
+         label(for="updateRecord") Update Record
+         div
+         input(type="radio" name="crudAction" id="deleteRecord")
+         label(for="deleteRecord") Delete Record
+         div(class="updateEntry")
+         button(type="submit") Update!
+    form(method="GET" action="/")
+      div(class="updateEntry")
+        h3 Get Entry
+        div(class="getEntry")
+        input(type="number" placeholder="Catalogue Number" class="textInput" name="id")
+        button(type="submit") Retrieve!
 
 div(class="body-text")
+  p From today's featured article
+  p Mansur Nizar ibn al-Mustansir (1045–1095) was a Fatimid prince and the eldest son of al-Mustansir, an Isma'ili imam and the eighth Fatimid caliph. When al-Mustansir died in December 1094, the powerful vizier, al-Afdal Shahanshah, raised Nizar's younger brother al-Musta'li to the throne in Cairo, bypassing the claims of Nizar and other older sons of al-Mustansir. Nizar escaped, rebelled and seized Alexandria, where he reigned as caliph with the regnal name al-Mustafa li-Din Allah. In late 1095, he was defeated, taken prisoner and executed by immurement. During the 12th century, some of Nizar's actual or claimed descendants tried, without success, to seize the throne from the Fatimid caliphs. Many Isma'ilis, especially in Persia, rejected al-Musta'li and considered Nizar to have been the rightful imam. As a result, they split off from the Fatimid regime and founded the Nizari branch of Isma'ilism, with their own line of imams who claimed descent from Nizar. This line continues to this day in the person of the Aga Khan. (Full article...)
+  p Recently featured:
+
