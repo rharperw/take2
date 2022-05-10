@@ -4,9 +4,8 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body></body>
-<h2>Record Catalogue</h2>
-<div class="flex-container">
-  <div class="flex-child magenta">
+<div class="sidebar">
+  <div class="forms">
     <form method="post" action="/table/add">
       <div class="newRecord">
         <h3>Create New Entry</h3>
@@ -28,7 +27,8 @@
         <div class="newRecord"></div>
         <button type="submit">Create!</button>
       </div>
-      <form method="PUT" action="/table/amend"></form>
+    </form>
+    <form method="PUT" action="/table/amend">
       <div class="updateEntry">
         <h3>Update Existing Entry</h3>
         <div class="updateEntry"></div>
@@ -59,11 +59,12 @@
             <input type="radio" name="crudAction" id="deleteRecord">
             <label for="deleteRecord">Delete Record</label>
           </div>
+          <div class="updateEntry">
+            <button type="submit">Update!</button>
+          </div>
         </fieldset>
-        <div class="updateEntry"></div>
-        <button type="submit">Update!</button>
       </div>
     </form>
   </div>
-  <div class="flex-child green">Main PAge</div>
 </div>
+<div class="body-text"></div>

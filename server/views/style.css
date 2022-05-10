@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -44,4 +44,38 @@
 
 .flex-child:first-child {
   margin-right: 20px;
+}
+
+.flex-child:
+
+} */
+
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 220px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  background-color: lightblue;
+}
+
+.forms {
+  font-size: small;
+  justify-content: end;
+  width: 200px;
+  padding-left: 15px;
+}
+
+.newRecord {
+  padding: 2px;
+}
+
+.updateEntry {
+  padding: 2px;
 }
