@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const methodOverride = require('method-override');
 const pool = require('../../server/helpers/database');
 const table = process.env.DB_TABLE;
+const app = express();
+
+app.use(methodOverride('X-HTTP-Method-Override'));
 
 /** get request */
 
@@ -60,10 +64,10 @@ router.put('/amend', async function (req, res) {
 
 /** delete request */
 
-router.delete('/:id', async function (req, res) {
+router.delete('/del', async function (req, res) {
   try {
     const delQuery = `DELETE FROM ${table} WHERE id = ?`;
-    const rows = await pool.query(delQuery, req.params.id);
+    const rows = await pool.query(delQuery, req.body.id);
     res.status(200).send('Entry deleted from DB');
   } catch (error) {
     res.status(400).send(error.message);

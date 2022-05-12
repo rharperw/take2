@@ -5,6 +5,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const path = require('path');
+const methodOverride = require('method-override');
 
 /** server config */
 dotenv.config({ path: '.env-local' });
@@ -17,6 +18,7 @@ const PORT = process.env.PORT || '3050';
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('views'));
+app.use(methodOverride('_method'));
 app.use(morgan('dev'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));

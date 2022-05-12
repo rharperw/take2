@@ -5,64 +5,6 @@ head
     link(rel="stylesheet" type="text/css" href="style.css")
 body
 
-//- h2 Record Catalogue
-          
-
-//- div(class="flex-container")
-//-   div(class="flex-child magenta")
-//-       form(method="post" action="/table/add")
-//-         div(class="newRecord")
-//-           h3 Create New Entry
-//-           div(class="newRecord")
-//-           label Year of release 
-//-           input(type="number", name="release_year" placeholder="Year of release" min=1920)
-//-           div(class="newRecord")
-//-           label Album name 
-//-           input(type="text", name="album" placeholder="Album Title")
-//-           div(class="newRecord")
-//-           label Artist name
-//-           input(type="text", name="artist", placeholder="Artist Name")
-//-           div(class="newRecord")
-//-           label Genre
-//-           input(type="text", name="genre", placeholder='Genre')
-//-           div(class="newRecord")
-//-           label Subgenre
-//-           input(type="text", name="subgenre" placeholder="Subgenre")
-//-           div(class="newRecord")
-//-           button(type="submit") Create!
-
-//-         form(method="PUT" action="/table/amend")
-//-         div(class="updateEntry")
-//-           h3 Update Existing Entry
-//-           div(class="updateEntry")
-//-           label Year of release 
-//-           input(type="number", name="release_year" placeholder="Year of release" min=1920)
-//-           div(class="updateEntry")
-//-           label Album name 
-//-           input(type="text", name="album" placeholder="Album Title")
-//-           div(class="updateEntry")
-//-           label Artist name
-//-           input(type="text", name="artist", placeholder="Artist Name")
-//-           div(class="updateEntry")
-//-           label Genre
-//-           input(type="text", name="genre", placeholder='Genre')
-//-           div(class="updateEntry")
-//-           label Subgenre
-//-           input(type="text", name="subgenre" placeholder="Subgenre")
-//-           div(class="updateEntry")
-//-           label Catalogue Number
-//-           input(type="text", name="id" placeholder="Record Number")
-//-           div(class="updateEntry")
-//-           fieldset(class="radioButtons")
-//-             div 
-//-               input(type="radio" name="crudAction" id="updateRecord")
-//-               label(for="updateRecord") Update Record
-//-             div
-//-               input(type="radio" name="crudAction" id="deleteRecord")
-//-               label(for="deleteRecord") Delete Record
-//-           div(class="updateEntry")
-//-           button(type="submit") Update!
-
 div(class="sidebar")
   div(class="forms")
     form(method="post" action="/table/add")
@@ -80,7 +22,7 @@ div(class="sidebar")
         input(type="text", name="subgenre" placeholder="Subgenre" class="textInput")
         div(class="newRecord")
         button(type="submit") Create!
-    form(method="PUT" action="/table/amend")
+    form(method="POST" action="/table/amend?_method=PUT")
       div(class="updateEntry")
         h3 Update Existing Entry
         div(class="updateEntry")
@@ -96,18 +38,10 @@ div(class="sidebar")
         div(class="updateEntry")
         input(type="text", name="id" placeholder="Record Number" class="textInput")
         div(class="updateEntry")
-        fieldset(class="radioButtons")
-         div 
-         input(type="radio" name="crudAction" id="updateRecord")
-         label(for="updateRecord") Update Record
-         div
-         input(type="radio" name="crudAction" id="deleteRecord")
-         label(for="deleteRecord") Delete Record
-         div(class="updateEntry")
-         button(type="submit") Update!
-    form(method="GET" action="/")
-      div(class="updateEntry")
-        h3 Get Entry
-        div(class="getEntry")
+        button(type="submit") Update!
+    form(method="POST" action="/table/del?_method=DELETE")
+      div(class="deleteEntry")
+        h3 Delete Entry
+        div(class="deleteEntry")
         input(type="number" placeholder="Catalogue Number" class="textInput" name="id")
-        button(type="submit") Retrieve!
+        button(type="submit") Delete!
