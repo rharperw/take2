@@ -9,10 +9,11 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 /** get request */
 
-router.get('/', async function (req, res) {
+router.get('/get', async function (req, res) {
   try {
-    const sqlQuery = `SELECT * FROM ${table} where id=?`;
-    const rows = await pool.query(sqlQuery, req.body.id);
+    const { id } = req.body;
+    const sqlQuery = `SELECT * FROM ${table} WHERE id=?`;
+    const rows = await pool.query(sqlQuery, [id]);
     res.status(200).json(rows);
   } catch (error) {
     res.status(400).send(error.message);
@@ -34,7 +35,9 @@ router.post('/add', async function (req, res) {
       subgenre,
     ]);
 
-    res.status(200).send(`Entry has been succesfully added to the database`);
+    res
+      .status(200)
+      .send(alert(`Entry has been succesfully added to the database`));
   } catch (error) {
     res.status(400).send(error.message);
   }

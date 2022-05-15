@@ -45,3 +45,8 @@ div(class="sidebar")
         div(class="deleteEntry")
         input(type="number" placeholder="Catalogue Number" class="textInput" name="id")
         button(type="submit") Delete!
+    form(method="GET" action="table/get")
+      div(class="getEntry")
+        h3 Get Entry
+        input(type="number" name="id" placeholder="Record Number" class="textInput")
+        button(type="submit") Get!
